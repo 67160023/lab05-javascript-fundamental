@@ -2,9 +2,7 @@
 
 ## 01-variables.js - 6. Challenge: Create a Person Object
 
-โค้ดนี้เป็นการสร้าง object ชื่อ student ในภาษา JavaScript เพื่อเก็บข้อมูลนักเรียน เช่น ชื่อ นามสกุล อายุ เกรดเฉลี่ย และรายวิชา จากนั้นมีการสร้างฟังก์ชันภายใน object คือ `getFullName()` สำหรับรวมชื่อและนามสกุล และ `getInfo()` สำหรับแสดงข้อมูลรวมทั้งหมด ``เมื่อใช้`console.log()`โปรแกรมจะแสดง object ทั้งหมดออกมาก่อน ต่อด้วยชื่อเต็มจาก getFullName() ข้อมูลรวมจาก getInfo() และรายวิชาที่เรียน โดยใช้ .join(", ") รวม array ให้เป็นข้อความเดียว
-
-สรุปคือ โค้ดนี้สาธิตการใช้ object, method และการเข้าถึงข้อมูลภายใน object ด้วย this พร้อมแสดงผลออกทางหน้าจออย่างเป็นระบบ
+โค้ดนี้เป็นการสร้าง object ชื่อ student ในภาษา JavaScript เพื่อเก็บข้อมูลนักเรียน เช่น ชื่อ นามสกุล อายุ เกรดเฉลี่ย และรายวิชา จากนั้นมีการสร้างฟังก์ชันภายใน object คือ `getFullName()` สำหรับรวมชื่อและนามสกุล และ `getInfo()` สำหรับแสดงข้อมูลรวมทั้งหมด เมื่อใช้`console.log()`โปรแกรมจะแสดง object ทั้งหมดออกมาก่อน ต่อด้วยชื่อเต็มจาก `getFullName()` ข้อมูลรวมจาก `getInfo()` และรายวิชาที่เรียน โดยใช้ `.join(", ")` รวม array ให้เป็นข้อความเดียว
 
 ### ผลลัพธ์
 
@@ -22,6 +20,7 @@ firstName: 'Alice',
 Full name: Alice Smith  
 Info: Alice Smith, Age: 20, GPA: 3.8  
 Courses: HTML, CSS, JavaScript
+--
 
 ## 02-functions.js - 8. Returning Objects, 9. Function as Parameter (Callback)
 
@@ -47,6 +46,7 @@ Callback Function:
 Original: [ 1, 2, 3, 4, 5 ]
 Doubled: [ 2, 4, 6, 8, 10 ]
 Squared: [ 1, 4, 9, 16, 25 ]
+--
 
 ## 03-control-flow.js - 5. Short-Circuit Evaluation, 7. Form Validation
 
@@ -58,7 +58,7 @@ user && user.profile
 สรุป
 || หยุดเมื่อเจอค่า true, && หยุดเมื่อเจอค่า false และ ?. ใช้ป้องกัน error จากค่า null/undefined
 
-## ผลลัพธ์
+### ผลลัพธ์
 
 Short-Circuit Evaluation:  
 User name: John  
@@ -67,6 +67,7 @@ User profile: undefined
 Form Validation:  
 Valid user: { isValid: true, errors: [] }  
 Invalid user: { isValid: false, errors: [ "Name must be at least 3 characters", "Valid email is required", "Must be 18 or older", "Password must be at least 6 characters", "Must agree to terms" ] }
+--
 
 ## 04-loops.js - 9. Chaining methods, 10. Challenge: Student Grades
 
@@ -74,7 +75,7 @@ Invalid user: { isValid: false, errors: [ "Name must be at least 3 characters", 
 
 โค้ดส่วนที่ 10 เป็นการวิเคราะห์ข้อมูลนักเรียนจาก array ของ object โดยใช้ `map()` เพื่อดึงรายชื่อทั้งหมด ใช้ `filter()`คัดกรองนักเรียนที่ได้คะแนนตั้งแต่ 85 ขึ้นไป และใช้ `reduce()` เพื่อคำนวณค่าเฉลี่ยของคะแนนทั้งห้อง รวมถึงใช้ reduce() อีกครั้งเพื่อหานักเรียนที่ได้คะแนนสูงสุด สุดท้ายมีการสร้างสรุปข้อมูลโดยเพิ่มเกรดให้แต่ละคนด้วย `map()` จัดเรียงคะแนนจากมากไปน้อยด้วย `sort()` และแสดงผลรายชื่อนักเรียนทีละคนด้วย `forEach()`
 
-## ผลลัพธ์
+### ผลลัพธ์
 
 Method chaining:
 Even numbers squared: 2²=4, 4²=16, 6²=36, 8²=64, 10²=100
@@ -99,14 +100,14 @@ Eve: 88 (B)
 Charlie: 85 (B)
 Bob: 75 (C)
 
-✅ Activity 4 completed!
+## ✅ Activity 4 completed!
 
 ## 05-integration.js - Activity 5: Integration - Quiz Application
 
 โค้ดนี้เป็นโปรแกรม Quiz ที่เริ่มจากแสดงชื่อแอป จากนั้นกำหนดชุดคำถามในรูปแบบ array ของ object แล้วสร้างตัวแปร results เพื่อเก็บผลลัพธ์ โปรแกรมใช้ `forEach()` วนลูปแต่ละข้อ สุ่มคำตอบผู้ใช้ด้วย `Math.random()` ตรวจว่าถูกหรือไม่ แล้วบันทึกข้อมูลลงใน results
 เมื่อทำครบทุกข้อ โปรแกรมจะแสดงผลลัพธ์รายข้อ นับจำนวนข้อที่ถูกด้วย `filter()` คำนวณคะแนนเป็นเปอร์เซ็นต์ แล้วกำหนดเกรดด้วยเงื่อนไข `if-else` ต่อมาจะแสดง Feedback และสถิติการทำแบบทดสอบ สุดท้ายใช้ `reduce()` สรุปจำนวนข้อที่ถูกและผิดก่อนจบการทำงาน
 
-## ผลลัพธ์
+### ผลลัพธ์
 
 🎯🎯 === QUIZ APPLICATION === 🎯🎯  
 QUIZ RESULTS:  
